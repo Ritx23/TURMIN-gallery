@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Ritx23.github.io/TURMIN-quba-gallery",
+  "homepage": "https://Ritx23.github.io/TURMIN-gallery/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
