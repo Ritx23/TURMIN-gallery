@@ -12,19 +12,20 @@ import './App.css';
 const ALL_CATEGORIES = ['All', 'Nature', 'Architecture', 'Portrait', 'Abstract', 'Ocean'];
 
 // Local fallback images (already in /public/images/) used when API fails
+const BASE = import.meta.env.BASE_URL;
 const FALLBACK_IMAGES = [
-  { id: 'f1',  src: '/images/nature1.jpg',   thumb: '/images/nature1.jpg',   title: 'Alpine Majesty',      photographer: 'TURMIN',  category: 'Nature',       location: 'Grand Teton, USA',   likes: 4821 },
-  { id: 'f2',  src: '/images/arch1.jpg',     thumb: '/images/arch1.jpg',     title: 'Glass Geometry',      photographer: 'TURMIN',  category: 'Architecture', location: 'New York, USA',      likes: 3102 },
-  { id: 'f3',  src: '/images/portrait1.jpg', thumb: '/images/portrait1.jpg', title: 'Neon Gaze',           photographer: 'TURMIN',  category: 'Portrait',     location: 'Paris, France',      likes: 6734 },
-  { id: 'f4',  src: '/images/abstract1.jpg', thumb: '/images/abstract1.jpg', title: 'Liquid Dreams',       photographer: 'TURMIN',  category: 'Abstract',     location: 'Studio',             likes: 2987 },
-  { id: 'f5',  src: '/images/ocean1.jpg',    thumb: '/images/ocean1.jpg',    title: 'Deep Azure',          photographer: 'TURMIN',  category: 'Ocean',        location: 'Maldives',           likes: 5613 },
-  { id: 'f6',  src: '/images/nature2.jpg',   thumb: '/images/nature2.jpg',   title: 'Enchanted Canopy',    photographer: 'TURMIN',  category: 'Nature',       location: 'Black Forest',       likes: 3874 },
-  { id: 'f7',  src: '/images/arch2.jpg',     thumb: '/images/arch2.jpg',     title: 'Neon Bridge',         photographer: 'TURMIN',  category: 'Architecture', location: 'Brisbane, Australia', likes: 4210 },
-  { id: 'f8',  src: '/images/ocean2.jpg',    thumb: '/images/ocean2.jpg',    title: 'Coastal Fury',        photographer: 'TURMIN',  category: 'Ocean',        location: 'Scottish Highlands', likes: 5290 },
-  { id: 'f9',  src: '/images/portrait2.jpg', thumb: '/images/portrait2.jpg', title: 'The Quiet Man',       photographer: 'TURMIN',  category: 'Portrait',     location: 'Berlin, Germany',    likes: 7891 },
-  { id: 'f10', src: '/images/abstract2.jpg', thumb: '/images/abstract2.jpg', title: 'Cyber Grid',          photographer: 'TURMIN',  category: 'Abstract',     location: 'Digital Studio',     likes: 4450 },
-  { id: 'f11', src: '/images/nature3.jpg',   thumb: '/images/nature3.jpg',   title: 'Sakura Path',         photographer: 'TURMIN',  category: 'Nature',       location: 'Kyoto, Japan',       likes: 6102 },
-  { id: 'f12', src: '/images/arch3.jpg',     thumb: '/images/arch3.jpg',     title: 'Tower Bridge Dusk',   photographer: 'TURMIN',  category: 'Architecture', location: 'London, UK',         likes: 3560 },
+  { id: 'f1',  src: `${BASE}images/nature1.jpg`,   thumb: `${BASE}images/nature1.jpg`,   title: 'Alpine Majesty',      photographer: 'TURMIN',  category: 'Nature',       location: 'Grand Teton, USA',    likes: 4821 },
+  { id: 'f2',  src: `${BASE}images/arch1.jpg`,     thumb: `${BASE}images/arch1.jpg`,     title: 'Glass Geometry',      photographer: 'TURMIN',  category: 'Architecture', location: 'New York, USA',       likes: 3102 },
+  { id: 'f3',  src: `${BASE}images/portrait1.jpg`, thumb: `${BASE}images/portrait1.jpg`, title: 'Neon Gaze',           photographer: 'TURMIN',  category: 'Portrait',     location: 'Paris, France',       likes: 6734 },
+  { id: 'f4',  src: `${BASE}images/abstract1.jpg`, thumb: `${BASE}images/abstract1.jpg`, title: 'Liquid Dreams',       photographer: 'TURMIN',  category: 'Abstract',     location: 'Studio',              likes: 2987 },
+  { id: 'f5',  src: `${BASE}images/ocean1.jpg`,    thumb: `${BASE}images/ocean1.jpg`,    title: 'Deep Azure',          photographer: 'TURMIN',  category: 'Ocean',        location: 'Maldives',            likes: 5613 },
+  { id: 'f6',  src: `${BASE}images/nature2.jpg`,   thumb: `${BASE}images/nature2.jpg`,   title: 'Enchanted Canopy',    photographer: 'TURMIN',  category: 'Nature',       location: 'Black Forest',        likes: 3874 },
+  { id: 'f7',  src: `${BASE}images/arch2.jpg`,     thumb: `${BASE}images/arch2.jpg`,     title: 'Neon Bridge',         photographer: 'TURMIN',  category: 'Architecture', location: 'Brisbane, Australia',  likes: 4210 },
+  { id: 'f8',  src: `${BASE}images/ocean2.jpg`,    thumb: `${BASE}images/ocean2.jpg`,    title: 'Coastal Fury',        photographer: 'TURMIN',  category: 'Ocean',        location: 'Scottish Highlands',  likes: 5290 },
+  { id: 'f9',  src: `${BASE}images/portrait2.jpg`, thumb: `${BASE}images/portrait2.jpg`, title: 'The Quiet Man',       photographer: 'TURMIN',  category: 'Portrait',     location: 'Berlin, Germany',     likes: 7891 },
+  { id: 'f10', src: `${BASE}images/abstract2.jpg`, thumb: `${BASE}images/abstract2.jpg`, title: 'Cyber Grid',          photographer: 'TURMIN',  category: 'Abstract',     location: 'Digital Studio',      likes: 4450 },
+  { id: 'f11', src: `${BASE}images/nature3.jpg`,   thumb: `${BASE}images/nature3.jpg`,   title: 'Sakura Path',         photographer: 'TURMIN',  category: 'Nature',       location: 'Kyoto, Japan',        likes: 6102 },
+  { id: 'f12', src: `${BASE}images/arch3.jpg`,     thumb: `${BASE}images/arch3.jpg`,     title: 'Tower Bridge Dusk',   photographer: 'TURMIN',  category: 'Architecture', location: 'London, UK',          likes: 3560 },
 ];
 
 export default function App() {
